@@ -1,0 +1,19 @@
+{{>partials/header}}
+
+<form method="POST" action="cadastrar">
+    <label for="fname">Nome:</label><br>
+    <input type="text" id="fname" name="nome" placeholder="Digite o nome do usuário"/>
+    <br>
+    <label for="fage">Idade:</label><br>
+    <input type="text" id="fage" name="idade" placeholder="Digite a idade do usuário"/>
+    <br>
+    <input type="submit" value="Enviar"/>
+</form>
+<h2>Usuários do banco</h2>
+<ul>
+    {{#users}}
+        <li>{{name}} - Idade: {{age}}</li>
+    {{/users}}
+</ul>
+
+{{>partials/footer}}
